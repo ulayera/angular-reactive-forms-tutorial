@@ -1,0 +1,56 @@
+<form class="break" autocomplete="off" [formGroup]="myForm">
+  <label for="firstName">First Name</label>
+  <input id="firstName" formControlName="firstName">
+
+  <label for="lastName">Last Name</label>
+  <input id="lastName" formControlName="lastName">
+
+  <button type="submit" [disabled]="!myForm.valid" (click)="submit()">Submit</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <table border="1">
+    <tr>
+      <td></td>
+      <td class="bold">valid</td>
+      <td class="bold">dirty</td>
+      <td class="bold">touched</td>
+      <td class="bold">enabled</td>
+    </tr>
+    <tr>
+      <td class="bold">myForm</td>
+      <td [class]="myForm.valid ? 'green' : 'red'">{{ myForm.valid }}</td>
+      <td [class]="myForm.dirty ? 'green' : 'red'">{{ myForm.dirty }}</td>
+      <td [class]="myForm.touched ? 'green' : 'red'">{{ myForm.touched }}</td>
+      <td [class]="myForm.enabled ? 'green' : 'red'">{{ myForm.enabled }}</td>
+    </tr>
+    <tr>
+      <td class="bold">firstName</td>
+      <td [class]="myForm.controls.firstName.valid ? 'green' : 'red'">{{ myForm.controls.firstName.valid }}</td>
+      <td [class]="myForm.controls.firstName.dirty ? 'green' : 'red'">{{ myForm.controls.firstName.dirty }}</td>
+      <td [class]="myForm.controls.firstName.touched ? 'green' : 'red'">{{ myForm.controls.firstName.touched }}</td>
+      <td [class]="myForm.controls.firstName.enabled ? 'green' : 'red'">{{ myForm.controls.firstName.enabled }}</td>
+    </tr>
+    <tr>
+      <td class="bold">lastName</td>
+      <td [class]="myForm.controls.lastName.valid ? 'green' : 'red'">{{ myForm.controls.lastName.valid }}</td>
+      <td [class]="myForm.controls.lastName.dirty ? 'green' : 'red'">{{ myForm.controls.lastName.dirty }}</td>
+      <td [class]="myForm.controls.lastName.touched ? 'green' : 'red'">{{ myForm.controls.lastName.touched }}</td>
+      <td [class]="myForm.controls.lastName.enabled ? 'green' : 'red'">{{ myForm.controls.lastName.enabled }}</td>
+    </tr>
+  </table>
+</form>

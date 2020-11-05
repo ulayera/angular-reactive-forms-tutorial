@@ -1,0 +1,9 @@
+<form class="break" autocomplete="off">
+  <label for="firstName">First Name</label>
+  <input id="firstName" name="firstName" [(ngModel)]="firstName">
+
+  <label for="lastName">Last Name</label>
+  <input id="lastName" name="lastName" [(ngModel)]="lastName">
+
+  <button type="submit" [disabled]="!isSubmittable()" (click)="submit()">Submit</button>
+</form>

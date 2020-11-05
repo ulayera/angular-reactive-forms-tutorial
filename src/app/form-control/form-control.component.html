@@ -1,0 +1,49 @@
+<form class="break" autocomplete="off">
+  <label for="firstName">First Name</label>
+  <input id="firstName" [formControl]="firstName">
+
+  <label for="lastName">Last Name</label>
+  <input id="lastName" [formControl]="lastName">
+
+  <button type="submit" [disabled]="!isSubmittable()" (click)="submit()">Submit</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <table border="1">
+    <tr>
+      <td></td>
+      <td class="bold">valid</td>
+      <td class="bold">dirty</td>
+      <td class="bold">touched</td>
+      <td class="bold">enabled</td>
+    </tr>
+    <tr>
+      <td class="bold">firstName</td>
+      <td [class]="firstName.valid ? 'green' : 'red'">{{ firstName.valid }}</td>
+      <td [class]="firstName.dirty ? 'green' : 'red'">{{ firstName.dirty }}</td>
+      <td [class]="firstName.touched ? 'green' : 'red'">{{ firstName.touched }}</td>
+      <td [class]="firstName.enabled ? 'green' : 'red'">{{ firstName.enabled }}</td>
+    </tr>
+    <tr>
+      <td class="bold">lastName</td>
+      <td [class]="lastName.valid ? 'green' : 'red'">{{ lastName.valid }}</td>
+      <td [class]="lastName.dirty ? 'green' : 'red'">{{ lastName.dirty }}</td>
+      <td [class]="lastName.touched ? 'green' : 'red'">{{ lastName.touched }}</td>
+      <td [class]="lastName.enabled ? 'green' : 'red'">{{ lastName.enabled }}</td>
+    </tr>
+  </table>
+</form>
